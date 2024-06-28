@@ -7,8 +7,8 @@ namespace HarshaApi1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [TypeFilter(typeof(StudentActionFilter),Arguments = new Object[] {3},Order =3)]
-    [TypeFilter(typeof(MethodExpiredFilter), Arguments = new Object[] { 2 },Order =2)]
+   // [TypeFilter(typeof(StudentActionFilter),Arguments = new Object[] {3},Order =3)]
+    //[TypeFilter(typeof(MethodExpiredFilter), Arguments = new Object[] { 2 },Order =2)]
     public class StudentController : ControllerBase
     {
         public StudentController(HasrhaApiDbContext dbContext)
@@ -18,7 +18,7 @@ namespace HarshaApi1.Controllers
 
         public HasrhaApiDbContext DbContext { get; }
 
-        [TypeFilter(typeof(StudentActionFilter))]
+       // [TypeFilter(typeof(StudentActionFilter))]
         [HttpPost("CreateStudent")]
         public async Task<IActionResult> CreateStudent([FromBody]Student student)
         {
@@ -41,7 +41,7 @@ namespace HarshaApi1.Controllers
             Student? student1 = DbContext?.StudentTbl?.Where(s => s.Id == studentId).FirstOrDefault();
             return Ok(student1);
         }
-        [TypeFilter(typeof(MethodExpiredFilter), Arguments = new Object[] { 1 },Order =1)]
+       // [TypeFilter(typeof(MethodExpiredFilter), Arguments = new Object[] { 1 },Order =1)]
         [HttpDelete]
         public async Task<IActionResult> DeleteStudent(int studentId)
         {

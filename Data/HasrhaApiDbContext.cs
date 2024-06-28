@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HarshaApi1.Data
 {
-    public class HasrhaApiDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>
+    public class HasrhaApiDbContext : IdentityDbContext<ApplicationUser, ApplicationRoles, Guid>
     {
         public HasrhaApiDbContext(DbContextOptions<HasrhaApiDbContext> contextOptions) : base(contextOptions)
         {

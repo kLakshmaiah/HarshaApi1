@@ -12,7 +12,8 @@ namespace HarshaApi1.Controllers
     {
         [HttpPost]
         //[ServiceFilter(typeof(MethodExpiredFilter2))]
-        [Filters.FilterAsAtrribute.MethodExpiredFilter(1)]
+        //[Filters.FilterAsAtrribute.MethodExpiredFilter(1)]
+        [MethodExpiredFilter3(2)]
         public IActionResult GetEmployee(Employee employee)
         {
             return Ok("Employee");

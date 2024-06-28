@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HarshaApi1.Migrations
 {
     [DbContext(typeof(HasrhaApiDbContext))]
-    [Migration("20240523053557_GetStudents_Sp_Db")]
-    partial class GetStudents_Sp_Db
+    [Migration("20240626042149_update-harshaapi")]
+    partial class updateharshaapi
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

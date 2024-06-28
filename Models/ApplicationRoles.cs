@@ -2,7 +2,7 @@
 
 namespace HarshaApi1.Models
 {
-    public class ApplicationRole:IdentityRole<Guid>
+    public class ApplicationRoles:IdentityRole<Guid>
     {
     }
 }
